@@ -2,50 +2,54 @@
 
 ### Package manager
 1. Instalar dnf (opcional)
-    ```console
-    yum install dnf
-    dnf --version
-    ```
+```bash
+yum install dnf
+dnf --version
+```
 
 1. Actualizar centos (opcional)
-    ```console
-    sudo dnf update -y
-    ```
+```bash
+sudo dnf update -y
+```
 
 1. wget
-    ```console
+```bash
 
-    curl https://ifconfig.me
-    wget https://ifconfig.me
-    sudo dnf install -y wget
-    sudo dnf remove -y wget
-    ```
+curl https://ifconfig.me
+wget https://ifconfig.me
+sudo dnf install -y wget
+sudo dnf remove -y wget
+```
 
 
 
 ### bash / sh
 
-    ```console
-    echo $0
-    sh
-    echo $0
-    ```
+```bash
+echo $0
+sh
+echo $0
+```
 
 
-    ```console
-    #!/bin/sh
-    echo "123"
-    ```
-    ```console
-    #!/bin/bash
-    echo "123"
+```bash
+#!/bin/sh
+echo "123"
+```
+```bash
+#!/bin/bash
+echo "123"
     ```
 
 ### Sistema de archivos
 
 ```bash
 pwd
+mkdir /data
 cd /data
+cd ..
+mkdir -p /data/dir1/dir2/dir3
+mkdir -p ./data/dir1/dir2/dir3
 pwd
 echo "miguel" > data.txt
 ```
