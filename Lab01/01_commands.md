@@ -1,5 +1,6 @@
 # Lab01
 
+### Package manager
 1. Instalar dnf (opcional)
     ```console
     yum install dnf
@@ -22,7 +23,7 @@
 
 
 
-# 1: bash / sh
+### bash / sh
 
 ```bash
 #!/bin/sh
@@ -33,7 +34,7 @@ echo "123"
 #!/bin/bash
 echo "123"
 ```
-# 2: Sistema de archivos
+### Sistema de archivos
 
 ```bash
 mkdir /data
@@ -49,14 +50,14 @@ tail -3 data_demo.txt
 cat data_demo.txt |grep 2
 ```
 
-# 3: Listar contenido
+### Listar contenido
 ```bash
 ls
 ls -lt
 ls -lta
 ```
 
-# 4: Permisos
+### Permisos
 
 ```bash
 -rw-r--r--    1  wada  users  4096 abr 13 19:30 file
@@ -92,7 +93,7 @@ x-----x-----x-----------------------------------x
 x-----x-----x-----------------------------------x
 ```
 
-# 4: Cambiar permisos y owner
+### Cambiar permisos y owner
 ```bash
 chmod 400 file
 chmod 777 file
