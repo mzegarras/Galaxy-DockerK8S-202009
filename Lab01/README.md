@@ -89,11 +89,15 @@ presionar q
 
 
 ```bash
-for i in `seq 1 10`;do;echo $i > data_demo.txt;done
-for i in `seq 1 10`;do;echo $i >> data_demo.txt;done
-tail -3 data_demo.txt
-cat data_demo.txt |grep 2
+for i in `seq 1 10`;do echo $i > data_demo2.txt;done **fix
+for i in `seq 1 10`;do echo $i >> data_demo.txt;done **fix
+
+head -n 2 data_demo.txt
+tail -2 data_demo.txt
+cat data_demo.txt
+cat data_demo.txt |grep 10
 ```
+
 ### Copiar y mover archivos
 ```bash
 mkdir dir01
