@@ -218,6 +218,7 @@ chown miguel demo.txt
 
 
 Permisos ejecución
+
 ```bash
 chmod 744 01_hello.sh
 
@@ -231,4 +232,25 @@ chmod +x 01_hello.sh
 
 ./01_hello_B.sh
 ./01_hello.sh
+```
+
+### Reto 03
+
+1. Crear un shell que imprima la hora
+2. date / sh - bash
+3. Otorgar permisos de ejecución
+4. Ejecutarlo
+
+```bash
+
+vi printdate.sh
+
+#!/bin/bash
+date
+
+chmod +x printdate.sh
+chmod 744 printdate.sh
+
+sh printdate.sh
+./printdate.sh
 ```
