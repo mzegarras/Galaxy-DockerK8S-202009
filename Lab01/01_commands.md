@@ -36,10 +36,11 @@ echo $0
 #!/bin/sh
 echo "123"
 ```
+
 ```bash
 #!/bin/bash
 echo "123"
-    ```
+```
 
 ### Sistema de archivos
 
@@ -55,10 +56,11 @@ echo "miguel" > data.txt
 ```
 
 ```bash
-mkdir /data
-cd /data
-pwd
-echo "miguel" > data.txt
+vi demo.txt
+press i
+ESC + :
+wq 
+q!
 ```
 
 ```bash
