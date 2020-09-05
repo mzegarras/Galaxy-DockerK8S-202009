@@ -4,4 +4,7 @@
 
 
 ### Tools
-* [Filezilla](https://filezilla-project.org/) - Transferir archivos
+
+1. [Filezilla](https://filezilla-project.org/) - Transferir archivos
+1. [Putty](https://www.putty.org/) - Putty
+1. [Docker](https://www.docker.com/) - Docker / Docker-compose
