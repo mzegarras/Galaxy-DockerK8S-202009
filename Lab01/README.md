@@ -1,8 +1,6 @@
 # Despliegue de Aplicaciones con Docker y Kubernetes
 
-* [Syllabus]
-https://drive.google.com/drive/folders/17f-Qo5hYV2B31OfeAIzwnSZs8z4_jloC
-
+* [Syllabus](https://raw.githubusercontent.com/mzegarras/Galaxy-DockerK8S-202009/master/Lab01/Syllabus.pdf)
 
 
 ### Tools
