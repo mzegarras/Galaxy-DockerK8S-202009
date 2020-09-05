@@ -68,6 +68,17 @@ for i in `seq 1 10`;do;echo $i >> data_demo.txt;done
 tail -3 data_demo.txt
 cat data_demo.txt |grep 2
 ```
+### Copiar y mover archivos
+```bash
+mkdir dir01
+cd dir01
+echo "hola2" > lab01.txt
+cp ./lab01.txt lab02.txt
+mv lab01.txt ../
+cp -r dir01/ dir02
+mv dir01/ dir02/
+```
+
 
 ### Listar contenido
 ```bash
