@@ -1,26 +1,25 @@
 # Lab01
 
 ### Package manager
-1. Instalar dnf (opcional)
-```bash
-yum install dnf
-dnf --version
-```
+    1. Instalar dnf (opcional)
+    ```bash
+    yum install dnf
+    dnf --version
+    ```
 
-1. Actualizar centos (opcional)
-```bash
-sudo dnf update -y
-```
+    1. Actualizar centos (opcional)
+    ```bash
+    sudo dnf update -y
+    ```
 
-1. wget
-```bash
+    1. wget
+    ```bash
 
-curl https://ifconfig.me
-wget https://ifconfig.me
-sudo dnf install -y wget
-sudo dnf remove -y wget
-```
-
+    curl https://ifconfig.me
+    wget https://ifconfig.me
+    sudo dnf install -y wget
+    sudo dnf remove -y wget
+    ```
 
 
 ### bash / sh
