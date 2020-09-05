@@ -1,7 +1,3 @@
-ssh-keygen
-chmod 400 taller1
-ssh -i taller1 mzegarra@35.193.42.41
-
 
 # 1: Crear containers
 
