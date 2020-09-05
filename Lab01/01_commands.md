@@ -25,16 +25,30 @@
 
 ### bash / sh
 
-```bash
-#!/bin/sh
-echo "123"
-```
+    ```console
+    echo $0
+    sh
+    echo $0
+    ```
+
+
+    ```console
+    #!/bin/sh
+    echo "123"
+    ```
+    ```console
+    #!/bin/bash
+    echo "123"
+    ```
+
+### Sistema de archivos
 
 ```bash
-#!/bin/bash
-echo "123"
+pwd
+cd /data
+pwd
+echo "miguel" > data.txt
 ```
-### Sistema de archivos
 
 ```bash
 mkdir /data
