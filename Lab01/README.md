@@ -197,6 +197,11 @@ x-----x-----x-----------------------------------x
 ### Cambiar permisos y owner
 ```bash
 chmod 400 file
+chmod 440 file
+chmod 444 file
+chmod 644 file
+chmod 744 file
+chmod 774 file
 chmod 777 file
 ```
 
@@ -209,4 +214,21 @@ chown miguel:clients demo.txt
 miguel es owner
 ```bash
 chown miguel demo.txt
+```
+
+
+Permisos ejecución
+```bash
+chmod 744 01_hello.sh
+
+vi 01_hello_B.sh
+
+#!/bin/bash
+echo "bash - 123"
+
+
+chmod +x 01_hello.sh
+
+./01_hello_B.sh
+./01_hello.sh
 ```
