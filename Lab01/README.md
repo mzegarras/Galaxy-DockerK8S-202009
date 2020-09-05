@@ -45,22 +45,48 @@ echo "123"
 
 ```bash
 pwd
-mkdir /data
-cd /data
+cd
+cd ~
+echo "galaxy" > data.txt
+echo "galaxy2" > data
+ls -lt
+cat data.txt
+mkdir /data2
+mkdir data2
+mkdir ./data3
+cd /data2
+cd data2
+cd ./data2
 cd ..
-mkdir -p /data/dir1/dir2/dir3
-mkdir -p ./data/dir1/dir2/dir3
+mkdir -p /data4/dir1/dir2/dir3
+mkdir -p ./data4/dir1/dir2/dir3/dir4
 pwd
-echo "miguel" > data.txt
+cd ~ 
 ```
 
 ```bash
+cat data.txt
 vi demo.txt
 press i
-ESC + :
-wq 
+ESC + :wq 
 q!
 ```
+
+```bash
+vi docker.log
+presionar i
+2020-09-05 10:40
+ESC + :wq 
+```
+
+
+```bash
+man pwd
+man ls
+presionar q
+```
+
+
 
 ```bash
 for i in `seq 1 10`;do;echo $i > data_demo.txt;done
