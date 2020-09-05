@@ -1,4 +1,18 @@
 
+* wget
+```bash
+sudo docker images
+sudo su -
+docker images
+
+docker run -p 8008:80 nginx
+docker run -p 8080:80 nginx:latest
+docker run -p 8080:80 nginx:alpine
+
+docker pull nginx:alpine
+```
+
+
 # 1: Crear containers
 
 ```
