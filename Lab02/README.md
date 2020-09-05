@@ -9,7 +9,56 @@ docker run -p 8008:80 nginx
 docker run -p 8080:80 nginx:latest
 docker run -p 8080:80 nginx:alpine
 
+docker run -d -p 8080:80 nginx:alpine
+docker run -d -p 8081:80 nginx:alpine
+docker run -d -p 8082:80 nginx:alpine
+docker run -d -p 8083:80 nginx:alpine
+
 docker pull nginx:alpine
+
+docker rm  -f 3a00bfa2cc8a
+docker rm  -f c1a1ebc903ad
+docker rm  -f 009748a1683c
+
+docker logs <<ID_container>>
+docker logs <<ID_container>> -f
+ctrl + c
+
+
+```
+
+### Reto 01
+1. Descargar la siguientes imagenes de nginx
+    1.19.2-alpine
+    1.19-perl
+
+```bash
+    docker pull nginx:1.19.2-alpine
+    docker pull nginx:1.19.2-perl
+```
+
+1. Listar todas la imagenes
+
+```bash
+docker images
+```
+
+1. Listar todas la imagenes Rabbitmq
+
+latest
+management-alpine
+
+```bash
+docker pull rabbitmq:management-alpine
+docker pull rabbitmq:latest
+```
+
+1. Listar todas la imagenes Mysql
+
+```bash
+25.0 --> docker pull mysql:25.0 (No existe la tag)
+8.0.21 --> docker pull mysql:8.0.21
+8.0 --> docker pull mysql:8.0
 ```
 
 
