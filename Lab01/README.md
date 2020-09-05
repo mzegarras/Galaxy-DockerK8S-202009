@@ -101,14 +101,55 @@ cat data_demo.txt |grep 10
 ### Copiar y mover archivos
 ```bash
 mkdir dir01
+cp data_demo.txt ./dir01
+mv data_demo2.txt ./dir01
+mv docker.log ./dir01/docker01.log
 cd dir01
-echo "hola2" > lab01.txt
-cp ./lab01.txt lab02.txt
-mv lab01.txt ../
-cp -r dir01/ dir02
-mv dir01/ dir02/
 ```
 
+### Reto 01
+
+1. Crear un archivo galaxy.log con valores del 1 - 5 (vi)
+2. Buscar cadenas de texto que contengan 3 (cat|grep)
+
+```bash
+for var in {1..5};do  echo "valor de var $var" >> data.txt;  done;
+cat data.txt |grep 3
+
+echo "l1" > data01.txt
+echo "l2" >> data01.txt
+echo "l3" >> data01.txt
+```
+
+
+### Reto 02
+
+1. Crear los directorios ~/apps/app01/log
+2. Crear el archivo ~/apps/app01/log/server01.log
+3. Copiar el archivo ~/apps/app01/log/server01.log al profile
+
+```bash
+
+mkdir apps
+cd apps
+mkdir app01
+mkdir log
+cd ~
+cd ~/apps/app01/log
+
+
+mkdir -p ~/apps/app01/log
+touch ~/apps/app01/log/server01.log
+cp ~/apps/app01/log/server01.log ./server01.log
+
+```
+### Remover contenido
+
+```bash
+rm server01.log
+rm *.txt
+rm -rf ./apps
+```
 
 ### Listar contenido
 ```bash
