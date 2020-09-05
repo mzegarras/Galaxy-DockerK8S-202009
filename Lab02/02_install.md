@@ -1,4 +1,9 @@
 
+1. Actualizar centos (opcional)
+    ```bash
+    sudo dnf update -y
+    ```
+
 1. Agregar Docker-CE repositorio
     ```console
     sudo dnf config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo
@@ -31,7 +36,7 @@
     ```console
     sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
     ```
-1. Agregar acceso directo
+1. Verificar versión
     ```console
     docker-compose --version
     ```
