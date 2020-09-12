@@ -15,12 +15,12 @@
     docker exec -it a15f6d725e0c /bin/sh
     cd /usr/share/nginx/html
     lt -lt
-    
+
     echo $PWD
     cd /usr/local/Proyectos/Galaxy/DockerK8S-202009/Lab04
     docker run -v $PWD/resources:/usr/share/nginx/html -p 9060:80 nginx
     ``` 
-
+    
 1. Volumes readOnly
     ```bash
     docker images ls
@@ -44,7 +44,7 @@
 
 
     ```bash
-    docker run -v $(PWD)/data:/data/db -d mongo
+    docker run -v $(pwd)/data:/data/db -d mongo
     docker exec -it d5396946ffa5 /bin/sh
     mongo
     show dbs
@@ -52,6 +52,8 @@
     db.products.insertOne({name:"A book",pice: 12.99})
     db.products.find()
     db.products.find().pretty()
+
+    sudo docker inspect <<>>
     ```
 
 
