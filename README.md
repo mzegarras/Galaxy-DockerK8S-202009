@@ -24,7 +24,7 @@
 
 1. Conectarse a la máquina con certificado
     ```console
-    ssh -i ./credentials/DockerK8S-202009.pem centos@ec2-34-212-135-191.us-west-2.compute.amazonaws.com
+    ssh -i ./credentials/DockerK8S-202009.pem centos@34.211.110.106
     ```
 
 1. Conectarse a la máquina con certificado

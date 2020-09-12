@@ -17,13 +17,41 @@
 1. Crear containers [mysql](https://hub.docker.com/_/mysql) 
     ```bash
     docker run -e MYSQL_ROOT_PASSWORD=password -d mysql:8.0
+    docker exec -it <<id>> /bin/sh
+    mysql -h localhost -u root -p
+    show databases;
+    +--------------------+
+    | Database           |
+    +--------------------+
+    | information_schema |
+    | mysql              |
+    | performance_schema |
+    | sys                |
+    +--------------------+
     docker run -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=ventas -d mysql:8.0
+    docker exec -it <<id>> /bin/sh
+    mysql -h localhost -u root -p
+    show databases;
+    +--------------------+
+    | Database           |
+    +--------------------+
+    | information_schema |
+    | mysql              |
+    | performance_schema |
+    | sys                |
+    | ventas             |
+    +--------------------+
+    printenv
+    sudo docker rm eaf703346312 -f
+
+    docker run -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=ventas -p 3307:3306 -d mysql:8.0
     ```
 
 1. Crear containers [redis](https://hub.docker.com/_/redis) 
     ```bash
-
     docker run -d redis:alpine
+    docker run -d -p 6379:6379 redis:alpine
+    
     docker exec -it <<id>> /bin/sh
     redis-cli
     SET "limits:12345678" 100
@@ -41,7 +69,7 @@
     show dbs
     use shop
     db.products.insertOne({name:"A book A",pice: 10})
-    db.products.insertOne({name:"A book B",pice: 11})
+    db.products.insertOne({name:"A book B",pice: 11,category:"a"})
     db.products.find()
     db.products.find().pretty()
     ```
@@ -51,6 +79,7 @@
     ```bash
     docker run -it node:current-alpine3.11 /bin/sh
     docker exec -it <<id>> /bin/sh
+    node
     a=1;
     b=2;
     console.log(a+b);
@@ -75,14 +104,15 @@
     ```bash
     ```
 
-1. Kali Linux [Jenkins](https://hub.docker.com/_/jenkins)  
+1. Jenkins [Jenkins](https://hub.docker.com/_/jenkins)  
     ```bash
     docker run -p 8080:8080 jenkins:alpine
     ```
 
 1. Microservice Clientes
     ```bash
-    docker run -p 8080:8080 mzegarra/msclientes:0.0.1
+    sudo docker login -u mzegarra
+    docker run -d -p 8081:8080 mzegarra/msclientes:0.0.1
     curl http://localhost:8080/customers
     ```
 
