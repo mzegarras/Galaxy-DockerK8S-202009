@@ -11,8 +11,11 @@
 1. Volumes
     ```bash
     docker images ls
-    docker run -v /usr/local/Proyectos/Galaxy/DockerK8S-202009/Lab04/resources:/usr/share/nginx/html -p 9060:80 nginx
+    docker run -v /home/centos/html:/usr/share/nginx/html -d -p 8080:80 nginx
     docker exec -it a15f6d725e0c /bin/sh
+    cd /usr/share/nginx/html
+    lt -lt
+    
     echo $PWD
     cd /usr/local/Proyectos/Galaxy/DockerK8S-202009/Lab04
     docker run -v $PWD/resources:/usr/share/nginx/html -p 9060:80 nginx
@@ -25,6 +28,21 @@
     ``` 
 
 1. Mongo Volume
+
+
+    ```bash
+    docker run -d mongo:latest
+    docker exec -it <<id>> /bin/sh
+    mongo
+    show dbs
+    use shop
+    db.products.insertOne({name:"A book A",pice: 10})
+    db.products.insertOne({name:"A book B",pice: 11,category:"a"})
+    db.products.find()
+    db.products.find().pretty()
+    ```
+
+
     ```bash
     docker run -v $(PWD)/data:/data/db -d mongo
     docker exec -it d5396946ffa5 /bin/sh

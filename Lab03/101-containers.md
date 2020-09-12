@@ -122,12 +122,12 @@
     docker run -p 8081:80 mzegarra/lpsa:2.0
     ```
 
-
 1. Listar containers
     ```bash
     docker ps
     docker ps -a
     docker ps -aq
+    sudo docker rm $(sudo docker ps -aq) -f
     ```
 
 1. Liberar recursos
