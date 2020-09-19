@@ -24,10 +24,13 @@
 
 1. Conectarse a la máquina con certificado
     ```console
-    ssh -i ./credentials/DockerK8S-202009.pem centos@34.211.110.106
+    ssh -i ./credentials/DockerK8S-202009.pem centos@34.220.199.162
+    sudo su -
     ```
 
 1. Conectarse a la máquina con certificado
     ```console
     ssh centos@host_ip_address
     ```
+
+https://zoom.us/j/97430215970?pwd=bVpjbVB2VW4zSHU4MWFaelJaSEs1Zz09

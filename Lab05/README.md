@@ -86,8 +86,8 @@
 |Command    |Descripcion|Obligatorio|
 |-----------|-----------|-----------|
 |FROM       |Imagen base para construir la imagen|SI|
-|CMD	    |Ejecua el comando que inicia el container|SI|
-|ENTRYPOINT |Ejecua el comando que inicia el container|SI|
+|CMD	    |Ejecuta el comando que inicia el container|SI|
+|ENTRYPOINT |Ejecuta el comando que inicia el container|SI|
 |MAINTAINER |Quien mantiene le Dockerfile|SI
 |ENV |Definir variable de entorno|NO
 |RUN |Ejecuta un comando y graba en resultado|NO

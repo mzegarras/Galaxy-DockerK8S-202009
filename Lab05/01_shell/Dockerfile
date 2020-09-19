@@ -1,2 +1,3 @@
 FROM alpine
-ENTRYPOINT echo "Hola"
+#ENTRYPOINT echo "Hola"
+ENTRYPOINT date
