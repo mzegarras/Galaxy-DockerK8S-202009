@@ -32,5 +32,3 @@
     ```console
     ssh centos@host_ip_address
     ```
-
-https://zoom.us/j/97430215970?pwd=bVpjbVB2VW4zSHU4MWFaelJaSEs1Zz09
