@@ -99,3 +99,13 @@
 1. CMD ["echo", "Hello World"] (exec estilo)
 1. ENTRYPOINT echo "Hello World" (shell estilo)
 1. ENTRYPOINT ["echo", "Hello World"] (exec estilo)
+
+
+
+apt-get update
+apt-get install -y curl
+
+
+
+sudo apt-get install -y curl
+sudo docker run -it ubuntu /bin/sh

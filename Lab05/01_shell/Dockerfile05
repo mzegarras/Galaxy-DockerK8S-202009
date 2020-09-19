@@ -3,3 +3,4 @@ FROM alpine
 #RUN apk add curl
 RUN apk update && apk add curl
 ENTRYPOINT ["curl", "ifconfig.me"]
+
