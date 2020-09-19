@@ -1,0 +1,3 @@
+FROM alpine
+ADD demo02.sh ./app.sh
+ENTRYPOINT ./app.sh

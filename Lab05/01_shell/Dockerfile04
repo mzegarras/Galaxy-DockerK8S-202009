@@ -1,0 +1,5 @@
+FROM alpine
+ADD demo03.sh ./app.sh
+ENV NAME "Galaxy"
+
+ENTRYPOINT ./app.sh
