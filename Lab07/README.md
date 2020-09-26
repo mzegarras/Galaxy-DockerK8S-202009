@@ -87,7 +87,7 @@
     ```        
 
 
-1. Reto Node
+# Reto Node
 
 * Generar la imagen del proyecto node
 
@@ -101,3 +101,31 @@
 
 * Para admins pudan usar mongo-express
     mongo-express->backend(proyecto previo)-->mongo
+
+
+
+### Networks
+
+```bash
+docker network ls
+docker network rm
+docker inspect network bb9dc739d01f
+docker network create galaxy-net
+    
+```
+
+```bash
+docker run --name mongo -e MONGO_INITDB_ROOT_USERNAME=root \
+-e MONGO_INITDB_ROOT_PASSWORD=pwd1234 \
+-e MONGO_INITDB_DATABASE=shop \
+--network galaxy-net  \
+-d mongo
+
+docker run --name mongo-express \
+-e ME_CONFIG_MONGODB_ADMINUSERNAME=root \
+-e ME_CONFIG_MONGODB_ADMINPASSWORD=pwd1234 \
+-e ME_CONFIG_MONGODB_ENABLE_ADMIN=true \
+-p 8081:8081 \
+--network galaxy-net  \
+-d mongo-express
+```    
