@@ -36,7 +36,7 @@
         your-image
     ```
 
-1. Proxy reverse
+1. Wordpress with proxy-reverse
     ```bash
 
     docker run --name mysql01 -e MYSQL_ROOT_PASSWORD=Password1234 -d mysql
@@ -47,3 +47,57 @@
 
 
     ```
+
+
+1. Api / Web  
+    ```bash
+
+    docker run --name mongodb -e MONGO_INITDB_ROOT_USERNAME=root \
+    -e MONGO_INITDB_ROOT_PASSWORD=pwd1234 \
+    -e MONGO_INITDB_DATABASE=shop \
+    -d mongo
+
+     docker run --name mongo-express \
+    -e ME_CONFIG_MONGODB_ADMINUSERNAME=root \
+    -e ME_CONFIG_MONGODB_ADMINPASSWORD=pwd1234 \
+    -e ME_CONFIG_MONGODB_ENABLE_ADMIN=true \
+    -p 8081:8081 \
+    --link mongodb:mongo \
+    -d mongo-express
+    
+
+    docker run -p 8082:8080 --name reactiveapi -v $PWD/application.yml:/application.yml --link mongodb -d reactivedemo:latest
+
+    http://localhost:8082/listar
+    http://localhost:8082/api/productos
+
+
+    docker run --name webserver --link reactiveapi -v $PWD/nginx.conf:/etc/nginx/nginx.conf:ro -p 8083:9060 -d nginx
+
+    ```    
+
+    ```bash
+    docker run --name mongodb -e MONGO_INITDB_ROOT_USERNAME=root \
+    -e MONGO_INITDB_ROOT_PASSWORD=pwd1234 \
+    -e MONGO_INITDB_DATABASE=shop \
+    -p 27017:27017 \
+    -d mongo
+
+    *** host.docker.internal
+    ```        
+
+
+1. Reto Node
+
+* Generar la imagen del proyecto node
+
+    * PORT: 3000
+    * URL_DB: 'mongodb://localhost:27017/interfaces'
+    * URL_DB_USER
+    * URL_DB_PWD
+
+* Ejecutar los containers
+    proxy-reverse->backend(proyecto previo)-->mongo
+
+* Para admins pudan usar mongo-express
+    mongo-express->backend(proyecto previo)-->mongo

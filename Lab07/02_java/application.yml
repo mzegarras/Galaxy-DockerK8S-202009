@@ -1,0 +1,12 @@
+spring:
+  data:
+    mongodb:
+      host: mongodb
+      username: root
+      password: pwd1234
+      port: 27017
+      database: shop
+      authentication-database: admin
+  thymeleaf:
+    reactive:
+      max-chunk-size: 1024
