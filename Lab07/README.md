@@ -22,6 +22,7 @@
     docker run --name mysql01 -p 3306:3306 -e MYSQL_ROOT_PASSWORD=Password1234 -d mysql
     ```
 
+
 1. Pull images
     ```bash
 
@@ -52,7 +53,7 @@
 
     docker run --name mysql01 -e MYSQL_ROOT_PASSWORD=Password1234 -d mysql
 
-    docker run --name wordpress01 --link mysql01 -e WORDPRESS_DB_HOST=mysql01:3306 -e WORDPRESS_DB_USER=root -e WORDPRESS_DB_PASSWORD=Password1234 -e WORDPRESS_DB_NAME=wordpress -e WORDPRESS_CONFIG_EXTRA="define('WP_HOME','http://localhost:8080'); define('WP_SITEURL','http://localhost:8080');" -d wordpress
+    docker run --name wordpress01 --link mysql01 -e WORDPRESS_DB_HOST=mysql01:3306 -e WORDPRESS_DB_USER=root -e WORDPRESS_DB_PASSWORD=Password1234 -e WORDPRESS_DB_NAME=wordpress -e WORDPRESS_CONFIG_EXTRA="define('WP_HOME','http://34.213.80.185:8080'); define('WP_SITEURL','http://34.213.80.185:8080');" -d wordpress
 
      docker run --name webserver --link wordpress01 -v $PWD/nginx.conf:/etc/nginx/nginx.conf:ro -p 8080:9060 -d nginx
 
@@ -76,8 +77,12 @@
     --link mongodb:mongo \
     -d mongo-express
     
+    docker build -t reactivedemo .
 
     docker run -p 8082:8080 --name reactiveapi -v $PWD/application.yml:/application.yml --link mongodb -d reactivedemo:latest
+
+
+     docker run --name reactiveapi -v $PWD/application.yml:/application.yml --link mongodb -d reactivedemo:latest
 
     http://localhost:8082/listar
     http://localhost:8082/api/productos
@@ -104,15 +109,14 @@
 
     * PORT: 3000
     * URL_DB: 'mongodb://localhost:27017/interfaces'
-    * URL_DB_USER
-    * URL_DB_PWD
+    * URL_DB_USER:
+    * URL_DB_PWD:
 
 * Ejecutar los containers
     proxy-reverse->backend(proyecto previo)-->mongo
 
 * Para admins pudan usar mongo-express
-    mongo-express->backend(proyecto previo)-->mongo
-
+    mongo-express-->mongo
 
 
 ### Networks

@@ -2,6 +2,8 @@ spring:
   data:
     mongodb:
       host: mongodb
+      #host: localhost
+      #host: host.docker.internal
       username: root
       password: pwd1234
       port: 27017
